@@ -32,7 +32,7 @@ export default function Footer() {
                 key={item.name}
                 href={item.href}
                 aria-label={item.name}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white transition hover:scale-105"
+                className="flex h-11 w-10 items-center justify-center rounded-full bg-white transition hover:scale-105"
               >
                 <img
                   src={item.icon}
