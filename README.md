@@ -1,4 +1,4 @@
-# KeenKeeper — Keep Your Friendships Alive
+
 
 ## 1. What is the name of your project?
 
