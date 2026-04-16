@@ -10,7 +10,7 @@ export default function FriendCard({ friend }) {
       <img
         src={friend.picture}
         alt={friend.name}
-        className="mx-auto h-20 w-20 rounded-full object-cover ring-4 ring-slate-100"
+        className="mx-auto h-21 w-20 rounded-full object-cover ring-4 ring-slate-100"
       />
 
       <h3 className="mt-4 text-lg font-bold text-slate-800">{friend.name}</h3>
