@@ -2,7 +2,7 @@ import FriendCard from '../cards/FriendCard';
 
 export default function FriendsSection({ friends }) {
   return (
-    <section className="mt-12">
+    <section className="mt-13">
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-2xl font-bold text-slate-800">Your Friends</h2>
       </div>
