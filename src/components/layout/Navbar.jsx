@@ -14,28 +14,33 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="KeenKeeper" className="h-7 w-auto" />
+          <img src={logo} alt="KeenKeeper" className="h-8 w-auto" />
         </Link>
 
-        <nav className="flex items-center gap-2">
+        <nav className="flex items-center gap-3">
           {navLinks.map(({ name, path, icon: Icon }) => (
-            <NavLink
-              key={name}
-              to={path}
-              end={path === '/'}
-              className={({ isActive }) =>
-                `flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition ${
-                  isActive
-                    ? 'bg-[#225c49] text-white shadow-sm'
-                    : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
-                }`
-              }
-            >
-              <Icon className="text-base" />
-              <span>{name}</span>
+            <NavLink key={name} to={path} end={path === '/'}>
+              {({ isActive }) => (
+                <div
+                  className={`flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all duration-200 ${
+                    isActive
+                      ? 'bg-[#225c49] text-white shadow-sm'
+                      : 'bg-transparent text-slate-700 hover:bg-slate-100'
+                  }`}
+                >
+                  <Icon
+                    className={`text-[18px] ${
+                      isActive ? '!text-white' : 'text-slate-700'
+                    }`}
+                  />
+                  <span className={isActive ? '!text-white' : 'text-slate-700'}>
+                    {name}
+                  </span>
+                </div>
+              )}
             </NavLink>
           ))}
         </nav>
